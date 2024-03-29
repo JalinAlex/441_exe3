@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="Calculate()">
+    <script>
+        //Name: Alex Zheng Qiuyang, NCC ID: 223190738  
+        function Calculate(unit1, unit2, unit3, unit4) {
+            const total = unit1 + unit2 + unit3 + unit4;
+            const average = total / 4;
+            return { total, average };
+        }
+
+        //ask if users need help with the calculation  
+        const needsHelp = prompt("Do you need help to calculate your average score?");
+
+        if (needsHelp.toLowerCase() === "yes") {
+            //get the user's full name  
+            const name = prompt("Please enter your full name:");
+
+            //get the grades for each unit  
+            const unit1 = parseFloat(prompt("Enter your grade for Unit 1:"));
+            const unit2 = parseFloat(prompt("Enter your grade for Unit 2:"));
+            const unit3 = parseFloat(prompt("Enter your grade for Unit 3:"));
+            const unit4 = parseFloat(prompt("Enter your grade for Unit 4:"));
+
+            //calculate 
+            const { total, average } = Calculate(unit1, unit2, unit3, unit4);
+
+            // output the results to the console  
+            console.log(`Total: ${total}`);
+            console.log(`Average score: ${average}`);
+            console.log("Thank you for using the program.");
+        } 
+        else {
+            console.log("Thank you for using the program.");
+        }
+    </script>
+</body>
+</html>
